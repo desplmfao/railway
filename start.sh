@@ -1,1 +1,1 @@
-bun install && bun run index.js
+bun init -y && bun install express && bun run index.js
