@@ -11,7 +11,7 @@ RUN apk --no-cache add curl bash libstdc++ ca-certificates && \
 
 WORKDIR /app
 
-COPY ./package.json ./src/ ./
+COPY ./package.json ./src/ ./index.js ./
 
 RUN bun install
 
