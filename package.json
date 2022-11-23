@@ -3,7 +3,7 @@
   "module": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "bun index.js"
+    "start": "bun src/index.js"
   },
   "dependencies": {
     "express": "^4.18.2"
