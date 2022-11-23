@@ -14,4 +14,4 @@ RUN addgroup --gid 101 --system appuser && adduser --uid 101 --system appuser &&
 USER appuser
 COPY . ./
 
-CMD ["sh", "start.sh"]
+CMD ["bun", "install", "&&", "bun", "run", "start"]
