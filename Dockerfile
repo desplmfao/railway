@@ -10,8 +10,9 @@ RUN apk --no-cache add curl bash libstdc++ ca-certificates && \
     apk del curl bash
 
 WORKDIR /app
-RUN addgroup --gid 101 --system appuser && adduser --uid 101 --system appuser && chown -R 101:101 /app && chmod -R g+w /app
-USER appuser
-COPY . ./
 
-CMD ["bun", "install", "&&", "bun", "run", "start"]
+COPY ./package.json ./src/ ./
+
+RUN bun install
+
+ENTRYPOINT bun run start
