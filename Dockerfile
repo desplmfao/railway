@@ -11,8 +11,7 @@ RUN apk --no-cache add curl bash libstdc++ ca-certificates && \
 
 WORKDIR /app
 RUN addgroup --gid 101 --system appuser && adduser --uid 101 --system appuser && chown -R 101:101 /app && chmod -R g+w /app
-RUN chmod 777 ./start.sh
 USER appuser
 COPY . ./
 
-CMD ["start.sh"]
+CMD ["bash", "start.sh"]
